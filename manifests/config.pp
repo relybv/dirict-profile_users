@@ -8,4 +8,14 @@ class profile_users::config {
     fail("Use of private class ${name} by ${caller_module_name}")
   }
 
+  accounts::user { 'testuser':
+    comment => 'Test User',
+#    groups  => [
+#      'sudo',
+#    ],
+#    sshkeys => [
+#      'ssh-rsa AAAAB3Nza...== jeff@puppetlabs.com',
+#      'ssh-dss AAAAB3Nza...== jeff@metamachine.net',
+#    ],
+  }
 }
