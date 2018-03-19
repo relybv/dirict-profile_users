@@ -1,0 +1,9 @@
+fixtures:
+  repositories:
+    stdlib:
+      repo: "https://github.com/puppetlabs/puppetlabs-stdlib.git"
+      ref: "4.13.1"
+    accounts: "https://github.com/puppetlabs/puppetlabs-accounts.git"
+    sudo: "https://github.com/saz/puppet-sudo.git"
+  symlinks:
+    profile_users: "#{source_dir}"
