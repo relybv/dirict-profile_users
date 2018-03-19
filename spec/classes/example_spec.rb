@@ -22,15 +22,16 @@ describe 'profile_users' do
           it { is_expected.to contain_class('profile_users::config') }
           it { is_expected.to contain_class('profile_users::service') }
 
-#          case facts[:operatingsystem]
-#          when 'Debian'
-#            it { is_expected.to contain_user('debian') }
-#          when 'Ubuntu'
-#            it { is_expected.to contain_user('ubuntu') }
-#          else
+          case facts[:operatingsystem]
+          when 'Debian'
+            it { is_expected.to contain_accounts__user('debian') }
+            it { is_expected.to contain_sudo__conf('debian') }
+          when 'Ubuntu'
+            it { is_expected.to contain_accounts__user('ubuntu') }
+            it { is_expected.to contain_sudo__conf('ubuntu') }
+          else
           # expect to fail
-#          end
-
+          end
         end
       end
     end
