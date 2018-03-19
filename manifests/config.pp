@@ -13,7 +13,7 @@ class profile_users::config {
 #    groups  => [
 #      'sudo',
 #    ],
-#    sshkeys => [
+    sshkeys => [ $::profile_users::admin_key ],
 #      'ssh-rsa AAAAB3Nza...== jeff@puppetlabs.com',
 #      'ssh-dss AAAAB3Nza...== jeff@metamachine.net',
 #    ],

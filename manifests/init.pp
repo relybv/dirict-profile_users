@@ -9,6 +9,7 @@
 #
 class profile_users
 (
+  $admin_key = $::profile_users::params::admin_key,
 ) inherits ::profile_users::params {
 
   # validate parameters here

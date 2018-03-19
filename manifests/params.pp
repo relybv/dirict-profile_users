@@ -4,6 +4,7 @@
 # It sets variables according to platform.
 #
 class profile_users::params {
+  $admin_key = hiera('admin_key', 'ssh-rsa')
   case $::operatingsystem {
     'Debian': {
       $users = 'debian'
